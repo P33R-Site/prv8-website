@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -10,9 +11,17 @@ export function Navbar() {
                 {/* Logo */}
                 <Link
                     href="#"
-                    className="text-white font-semibold tracking-tighter text-lg hover:opacity-80 transition-opacity"
+                    className="hover:opacity-80 transition-opacity"
                 >
-                    PRV8
+                    <div className="relative h-9 w-36">
+                        <Image
+                            src="/logo new.png"
+                            alt="PRV8"
+                            fill
+                            className="object-contain object-left"
+                            priority
+                        />
+                    </div>
                 </Link>
 
                 {/* Desktop Links */}

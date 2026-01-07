@@ -1,56 +1,76 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
     return (
-        <footer className="border-t border-white/5 bg-zinc-950 pt-16 pb-12">
+        <footer className="border-t border-white/10 bg-black pt-20 pb-10">
             <div className="max-w-6xl mx-auto px-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                    <div className="col-span-2 md:col-span-1">
-                        <Link href="#" className="text-white font-semibold tracking-tighter text-lg block mb-4">PRV8</Link>
-                        <p className="text-xs text-zinc-600">
-                            San Francisco • New York<br />
-                            © 2024 PRV8 Inc.
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-20">
+                    <div className="col-span-2 flex flex-col items-start gap-6">
+                        <Link href="#" className="block">
+                            <div className="relative h-9 w-36">
+                                <Image
+                                    src="/logo new.png"
+                                    alt="PRV8"
+                                    fill
+                                    className="object-contain object-left"
+                                />
+                            </div>
+                        </Link>
+                        <p className="text-sm text-zinc-500 leading-relaxed max-w-xs">
+                            The infrastructure for modern high-net-worth travel and concierge services.
+                            <br /><br />
+                            San Francisco • New York
                         </p>
                     </div>
 
                     <div>
-                        <h4 className="text-white font-medium text-xs mb-4">Product</h4>
-                        <ul className="space-y-3 text-xs text-zinc-500">
-                            <li><Link href="#" className="hover:text-white transition-colors">Overview</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Concierge API</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Integrations</Link></li>
+                        <h4 className="text-white font-semibold text-sm mb-6">Product</h4>
+                        <ul className="space-y-4 text-sm text-zinc-500">
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Overview</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Concierge API</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Integrations</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Pricing</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="text-white font-medium text-xs mb-4">Company</h4>
-                        <ul className="space-y-3 text-xs text-zinc-500">
-                            <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Enterprise</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
+                        <h4 className="text-white font-semibold text-sm mb-6">Company</h4>
+                        <ul className="space-y-4 text-sm text-zinc-500">
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">About</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Enterprise</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Blog</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Careers</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="text-white font-medium text-xs mb-4">Legal</h4>
-                        <ul className="space-y-3 text-xs text-zinc-500">
-                            <li><Link href="#" className="hover:text-white transition-colors">Privacy</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Terms</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Security</Link></li>
+                        <h4 className="text-white font-semibold text-sm mb-6">Legal</h4>
+                        <ul className="space-y-4 text-sm text-zinc-500">
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Terms of Service</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Security</Link></li>
+                            <li><Link href="#" className="hover:text-white transition-colors duration-200">Status</Link></li>
                         </ul>
                     </div>
                 </div>
 
-                {/* Contact Section */}
-                <div id="request" className="border-t border-white/5 pt-12 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <p className="text-sm text-zinc-400">Ready to modernize your concierge operations?</p>
-                    <div className="flex items-center gap-4">
-                        <a href="mailto:partners@prv8.com" className="text-xs text-zinc-500 hover:text-white transition-colors">partners@prv8.com</a>
-                        <button className="px-5 py-2 bg-white text-black text-xs font-medium rounded-full hover:bg-zinc-200 transition-colors">
-                            Request Demo
-                        </button>
+                {/* Bottom Section */}
+                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p className="text-xs text-zinc-600">
+                        © 2024 PRV8 Inc. All rights reserved.
+                    </p>
+
+                    <div className="flex items-center gap-6">
+                        <a href="mailto:partners@prv8.com" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                            partners@prv8.com
+                        </a>
+                        <div className="h-4 w-px bg-white/10 hidden md:block" />
+                        <div className="flex gap-4">
+                            {/* Social placeholders could go here, keeping it clean for now */}
+                        </div>
                     </div>
                 </div>
             </div>
