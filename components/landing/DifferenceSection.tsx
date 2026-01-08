@@ -5,45 +5,63 @@ import { motion } from "framer-motion";
 
 export function DifferenceSection() {
     return (
-        <section id="product" className="py-24 bg-zinc-900/10 border-t border-white/5">
+        <section id="product" className="py-32 bg-zinc-900/10 border-t border-white/5">
             <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-6">The PRV8 Difference</h2>
+                    <p className="text-amber-400 text-sm font-medium mb-3">The Solution</p>
+                    <h2 className="font-serif text-4xl md:text-5xl font-medium text-white tracking-tight mb-10">The PRV8 Difference</h2>
                     <div className="space-y-8">
-                        <div className="flex gap-4">
-                            <div className="shrink-0 mt-1">
-                                <Sparkles className="w-5 h-5 text-white" />
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="flex gap-5 items-start"
+                        >
+                            <div className="icon-accent">
+                                <Sparkles className="w-5 h-5 text-amber-400" />
                             </div>
                             <div>
-                                <h3 className="text-white font-medium mb-1">AI Outbound &amp; Inbound</h3>
-                                <p className="text-sm text-zinc-500">Not just a chatbot. Our infrastructure can place calls, negotiate reservations, and confirm details autonomously.</p>
+                                <h3 className="font-serif text-lg text-white mb-2">AI Outbound &amp; Inbound</h3>
+                                <p className="text-sm text-zinc-500 leading-relaxed">Not just a chatbot. Our infrastructure can place calls, negotiate reservations, and confirm details autonomously.</p>
                             </div>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="shrink-0 mt-1">
-                                <Target className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                                <h3 className="text-white font-medium mb-1">Intent Before Friction</h3>
-                                <p className="text-sm text-zinc-500">Predictive modeling captures user intent before they articulate a full request, reducing cognitive load.</p>
-                            </div>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="shrink-0 mt-1">
-                                <Users className="w-5 h-5 text-white" />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="flex gap-5 items-start"
+                        >
+                            <div className="icon-accent">
+                                <Target className="w-5 h-5 text-amber-400" />
                             </div>
                             <div>
-                                <h3 className="text-white font-medium mb-1">Human Escalation</h3>
-                                <p className="text-sm text-zinc-500">We don't replace humans; we elevate them. Complex edge cases are seamlessly handed off to expert operators.</p>
+                                <h3 className="font-serif text-lg text-white mb-2">Intent Before Friction</h3>
+                                <p className="text-sm text-zinc-500 leading-relaxed">Predictive modeling captures user intent before they articulate a full request, reducing cognitive load.</p>
                             </div>
-                        </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="flex gap-5 items-start"
+                        >
+                            <div className="icon-accent">
+                                <Users className="w-5 h-5 text-amber-400" />
+                            </div>
+                            <div>
+                                <h3 className="font-serif text-lg text-white mb-2">Human Escalation</h3>
+                                <p className="text-sm text-zinc-500 leading-relaxed">We don't replace humans; we elevate them. Complex edge cases are seamlessly handed off to expert operators.</p>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
 
                 {/* UI Abstraction/Visual */}
-                <div className="relative rounded-2xl border border-white/10 bg-black p-1 shadow-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-zinc-800/20 to-transparent rounded-2xl pointer-events-none"></div>
-                    <div className="bg-zinc-950 rounded-xl overflow-hidden p-6 space-y-4 min-h-[320px]">
+                <div className="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-1 shadow-2xl shadow-black/40">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent rounded-2xl pointer-events-none"></div>
+                    <div className="bg-zinc-950/80 backdrop-blur-md rounded-xl overflow-hidden p-6 space-y-4 min-h-[320px]">
                         {/* Fake Chat UI */}
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -53,7 +71,7 @@ export function DifferenceSection() {
                             className="flex items-start gap-3"
                         >
                             <div className="h-8 w-8 rounded-full bg-zinc-800 flex items-center justify-center shrink-0 text-xs text-white">U</div>
-                            <div className="bg-zinc-900 border border-white/5 rounded-2xl rounded-tl-none px-4 py-2 text-sm text-zinc-300">
+                            <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl rounded-tl-none px-4 py-2 text-sm text-zinc-300">
                                 I need a table for 4 in SoHo tonight, quiet atmosphere.
                             </div>
                         </motion.div>
@@ -87,7 +105,7 @@ export function DifferenceSection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 3.5 }}
-                            className="mt-4 p-3 bg-zinc-900/50 border border-white/5 rounded-lg flex items-center justify-between"
+                            className="mt-4 p-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-between"
                         >
                             <div className="flex items-center gap-3">
                                 <div className="h-8 w-8 rounded bg-zinc-800 flex items-center justify-center">

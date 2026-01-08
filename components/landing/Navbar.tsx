@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Navbar() {
     return (
-        <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-md">
+        <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl shadow-lg shadow-black/10">
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link
@@ -40,7 +40,7 @@ export function Navbar() {
                 {/* CTA */}
                 <Link
                     href="#request"
-                    className="group flex items-center gap-2 text-xs font-medium text-white border border-white/10 bg-white/5 px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                    className="group flex items-center gap-2 text-xs font-medium text-white border border-white/10 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-300"
                 >
                     <span>Request Access</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
