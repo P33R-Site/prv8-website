@@ -2,6 +2,7 @@
 
 import { Search, Zap, ShieldCheck, TrendingUp, ArrowRight } from "lucide-react";
 import { ClickableCard } from "@/components/ui/ClickableCard";
+import { DashboardPreview } from "@/components/landing/DashboardPreview";
 
 export function HowItWorks() {
     const steps = [
@@ -42,8 +43,8 @@ export function HowItWorks() {
                 <h2 className="font-serif text-4xl md:text-5xl font-medium text-white tracking-tight">System Architecture</h2>
             </div>
 
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-16">
                     {steps.map((step, index) => (
                         <ClickableCard
                             key={step.href}
@@ -68,7 +69,16 @@ export function HowItWorks() {
                         </ClickableCard>
                     ))}
                 </div>
+
+                {/* Dashboard Preview - Visual showcase of the planning interface */}
+                <div className="mt-20">
+                    <p className="text-center text-zinc-500 text-sm mb-8">
+                        See how PRV8 orchestrates your entire trip in one intelligent interface
+                    </p>
+                    <DashboardPreview />
+                </div>
             </div>
         </section>
     );
 }
+
